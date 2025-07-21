@@ -1,166 +1,203 @@
 # NomadicML Website
 
-A modern, responsive website for NomadicML featuring interactive dropdown navigation menus and video AI demonstrations.
+A modern, responsive website for NomadicML featuring AI-powered video analysis solutions for automotive and robotics applications, with interactive dropdown navigation and comprehensive platform showcases.
 
 ## 🚀 Features
 
-- **Interactive Dropdown Navigation**: Organized navigation menus similar to delve.co with structured sections and interactive links
-- **3-Tab Video Interface**: Interactive tabs showcasing video AI capabilities with embedded video demonstrations
-- **Responsive Design**: Mobile-first design that works across all devices
-- **Framer Animations**: Smooth, professional animations throughout the site
-- **Modern UI Components**: Built with shadcn/ui components and Tailwind CSS
+- **Interactive Dropdown Navigation**: Organized navigation menus with structured sections for Platform, Solutions, Get Started, and Company
+- **Hero Section with Tabs**: Interactive tabs showcasing video AI capabilities (Search Videos, Understand Motion, Scale with API)
+- **Solutions Portfolio**: Dedicated sections for Automotive Analysis, AV Simulation, Infrastructure Defect Detection, and Robotics
+- **Platform Components**: Detailed showcases of VLA Annotations, Event Search, Semantic Reasoning, and Customized Chat
+- **Value Proposition Section**: Cost and time savings comparisons (81% cost savings, 99.8% time savings)
+- **Responsive Design**: Mobile-first design optimized for all devices
+- **Smooth Animations**: Intersection Observer animations and hover effects
+- **Client-Side Routing**: React Router for seamless page navigation
 
 ## 📋 Prerequisites
 
-Before running this project, make sure you have the following installed:
+Before running this project from scratch, ensure you have:
 
 - **Node.js** (version 18.0.0 or higher)
 - **npm** (version 8.0.0 or higher) or **yarn**
 - **Git**
 
-## 🛠️ Installation & Setup
+## 🛠️ Setup from Scratch
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/vnkn/nomadic_website.git
-   cd nomadic_website
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-   or if you prefer yarn:
-   ```bash
-   yarn install
-   ```
-
-3. **Start the development server**
-   ```bash
-   npm run dev
-   ```
-   or with yarn:
-   ```bash
-   yarn dev
-   ```
-
-4. **Open your browser**
-   Navigate to `http://localhost:5173` to view the website
-
-## 🏗️ Build for Production
-
-To create a production build:
-
+### 1. Clone the Repository
 ```bash
-npm run build
+git clone <repository-url>
+cd nomadicml_website
 ```
 
-The built files will be in the `dist/` directory.
-
-To preview the production build locally:
-
+### 2. Install Dependencies
 ```bash
-npm run preview
+npm install
 ```
 
-## 📁 Project Structure
+This will install all required dependencies including:
+- React 18 + TypeScript
+- Vite (build tool)
+- React Router DOM
+- Tailwind CSS
+- Lucide React (icons)
+- All custom UI components
 
+### 3. Verify Project Structure
+Ensure you have the following structure:
 ```
-nomadic_website/
+nomadicml_website/
 ├── public/
-│   ├── i1DNpPLzeuJPVTJrRWJMsAYmwDg.mp4    # Demo video file
-│   └── vite.svg
+│   ├── images/                           # Static images
+│   │   ├── upload_videos_animation.png
+│   │   ├── ai_insights_animation.png
+│   │   ├── curve_image_1.png
+│   │   ├── curve_image_2.png
+│   │   ├── curve_img_3.png
+│   │   ├── curve_img_4.png
+│   │   ├── curve_img_5.png
+│   │   ├── curve_img_6.png
+│   │   └── NomadicMLLogo.png
+│   └── landing_page/                     # Video assets
+│       └── Search_Videos.mp4
 ├── src/
 │   ├── components/
-│   │   └── ui/                             # shadcn/ui components
-│   │       ├── navigation-menu.tsx
-│   │       ├── dropdown-menu.tsx
-│   │       └── tabs.tsx
-│   ├── App.tsx                             # Main application component
-│   ├── App.css                             # Global styles and animations
-│   ├── main.tsx                            # Application entry point
-│   └── framerAnimations.js                 # Framer animation utilities
-├── dist/                                   # Production build output
+│   │   ├── ui/
+│   │   │   └── delve-dropdown.tsx        # Custom dropdown component
+│   │   └── hooks/
+│   │       └── useDropdown.ts            # Dropdown hook
+│   ├── App.tsx                           # Main application with all components
+│   ├── App.css                           # Global styles and animations
+│   ├── main.tsx                          # Entry point with React Router
+│   └── index.css                         # Base Tailwind imports
 ├── package.json
 ├── tailwind.config.js
 ├── vite.config.ts
 └── README.md
 ```
 
-## 🎨 Key Components
+### 4. Start Development Server
+```bash
+npm run dev
+```
 
-### Navigation Menu
-- **How We Work**: Process and capabilities sections with interactive links
-- **Platform**: Features and use cases with call-to-action areas
-- **Resources**: Documentation links and support information
-- **Company**: About section with contact information
+The application will start at `http://localhost:5173`
 
-### Video Interface
-- **Search Videos**: Upload and analyze video content
-- **Understand Motion**: AI-powered motion analysis
-- **Scale with API**: Integration capabilities
+### 5. Verify All Features Work
+- ✅ Navigation dropdowns (Get Started, Platform, Solutions, Company)
+- ✅ Hero section tabs with video playback
+- ✅ Internal navigation links work properly
+- ✅ All images load correctly
+- ✅ Responsive design on different screen sizes
 
-## 🔧 Technologies Used
-
-- **React 18** - Modern React with hooks and functional components
-- **TypeScript** - Type-safe JavaScript development
-- **Vite** - Fast build tool and development server
-- **Tailwind CSS** - Utility-first CSS framework
-- **shadcn/ui** - High-quality React components
-- **Radix UI** - Accessible component primitives
-- **Lucide React** - Beautiful icon library
-
-## 🎯 Development Commands
+## 🎯 Available Scripts
 
 | Command | Description |
 |---------|-------------|
-| `npm run dev` | Start development server |
+| `npm run dev` | Start development server (hot reload enabled) |
 | `npm run build` | Build for production |
-| `npm run preview` | Preview production build |
-| `npm run lint` | Run ESLint |
+| `npm run preview` | Preview production build locally |
+| `npm run lint` | Run ESLint for code quality |
 
-## 🌐 Deployment
+## 🏗️ Build for Production
 
-The website can be deployed to any static hosting service:
+```bash
+npm run build
+```
 
-- **Vercel**: Connect your GitHub repository for automatic deployments
-- **Netlify**: Drag and drop the `dist/` folder or connect via Git
-- **GitHub Pages**: Use GitHub Actions to deploy the `dist/` folder
-- **AWS S3**: Upload the `dist/` folder contents to an S3 bucket
+The optimized build will be created in the `dist/` directory, ready for deployment.
 
-## 📱 Browser Support
+## 📱 Key Pages & Components
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+### Landing Page (/)
+- **Hero Section**: Interactive tabs with video demonstrations
+- **How We Work**: 3-step process (Upload → AI Analysis → Get Insights)
+- **Value Add Section**: ROI comparisons and efficiency metrics
+- **Solutions**: 4 main verticals (Automotive, AV Simulation, Infrastructure, Robotics)
+- **Platform**: Feature showcases and component details
 
-## 🤝 Contributing
+### Individual Pages
+- `/platform` - NomadicML Platform overview
+- `/sdk` - Code Level SDK documentation
+- `/driving` - Automotive solutions
+- `/simulation` - Autonomous Vehicle Simulation
+- `/infrastructure` - Infrastructure defect detection
+- `/robotics` - Robotics analysis solutions
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+### Navigation Features
+- **Get Started**: Links to internal sections (#upload-section, #ai-analysis-section, #insights-section)
+- **Platform**: External links to app.nomadicml.com and docs
+- **Solutions**: Internal page routing to solution verticals
+- **Company**: External links to documentation and demos
 
-## 📄 License
+## 🎨 Design System
 
-This project is proprietary software owned by NomadicML.
+### Color Scheme
+- **Primary**: Light blue gradient themes (`from-blue-50 to-cyan-50`)
+- **Accents**: Cyan (`cyan-400`, `cyan-500`) for CTAs
+- **Cards**: Semi-transparent white (`bg-white/80`) with backdrop blur
+- **Text**: Gray scale for hierarchy (`text-gray-900`, `text-gray-600`)
+
+### Animations
+- **Intersection Observer**: Fade-in animations for image galleries
+- **Hover Effects**: Scale and shadow transitions
+- **Dropdown Animations**: Slide-in/out with opacity
+- **Staggered Loading**: Sequential image animations
+
+## 🌐 Deployment to Vercel
+
+### Option 1: Automatic Deployment (Recommended)
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Vercel will auto-detect Vite and deploy
+
+### Option 2: Manual Deployment
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Build the project
+npm run build
+
+# Deploy
+vercel --prod
+```
+
+### Vercel Configuration
+The project includes proper Vite configuration for Vercel deployment. No additional setup required.
+
+## 🔧 Technologies Stack
+
+- **Frontend**: React 18 + TypeScript
+- **Build Tool**: Vite 4.x
+- **Styling**: Tailwind CSS 3.x
+- **Routing**: React Router DOM 6.x
+- **Icons**: Lucide React
+- **Animations**: CSS Keyframes + Intersection Observer API
+- **Deployment**: Vercel (optimized for Vite)
+
+## 🚨 Troubleshooting
+
+### Common Issues:
+
+1. **Images not loading**: Ensure all image files are in `public/images/`
+2. **Videos not playing**: Check `public/landing_page/Search_Videos.mp4` exists
+3. **Routing issues**: Verify React Router setup in `main.tsx`
+4. **Dropdown not working**: Check `useDropdown` hook implementation
+
+### Development Tips:
+- Use browser dev tools to check console for errors
+- Verify network tab for failed asset loads
+- Test navigation links individually
+- Check responsive design on different screen sizes
 
 ## 📞 Support
 
-For support and questions:
-- Email: support@nomadicml.com
-- Website: https://nomadicml.com
-- Documentation: https://docs.nomadicml.com
-
-## 🔗 Links
-
-- [Live Demo](https://html-cleanup-app-2kegzs3z.devinapps.com)
-- [NomadicML Platform](https://app.nomadicml.com)
-- [API Documentation](https://docs.nomadicml.com)
-- [Book a Call](https://calendly.com/nomadic-ml/nomadicml-intro)
+For technical support:
+- **Email**: support@nomadicml.com
+- **Documentation**: https://docs.nomadicml.com
+- **Platform Demo**: https://app.nomadicml.com
+- **Schedule Demo**: https://calendly.com/nomadic-ml/nomadicml-intro
 
 ---
 
-Built with ❤️ by the NomadicML team
+**Built with ❤️ by the NomadicML team** | Transforming hours of coordination into results within seconds
