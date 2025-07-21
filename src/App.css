@@ -1,0 +1,194 @@
+:root {
+  --token-09f133ed-0d43-429a-a52e-79336c0fbca1: rgb(244, 244, 250);
+  --token-text-primary: rgb(17, 24, 39);
+  --token-text-secondary: rgb(75, 85, 99);
+  --token-cyan-primary: rgb(34, 211, 238);
+  --token-cyan-hover: rgb(6, 182, 212);
+  --token-purple-primary: rgb(147, 51, 234);
+  --token-blue-primary: rgb(59, 130, 246);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--token-09f133ed-0d43-429a-a52e-79336c0fbca1);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: inherit;
+}
+
+#root {
+  max-width: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes framer-appear-fade-up {
+  0% {
+    opacity: 0.001;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes framer-appear-fade-in {
+  0% {
+    opacity: 0.001;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes framer-scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes framer-scroll-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes framer-scroll-text {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.framer-appear {
+  animation: framer-appear-fade-up 0.4s cubic-bezier(0.44, 0, 0.56, 1) forwards;
+}
+
+.framer-appear-fade {
+  animation: framer-appear-fade-in 0.4s cubic-bezier(0.44, 0, 0.56, 1) forwards;
+}
+
+.framer-scroll-left {
+  animation: framer-scroll-left 30s linear infinite;
+}
+
+.framer-scroll-right {
+  animation: framer-scroll-right 30s linear infinite;
+}
+
+.framer-scroll-text {
+  animation: framer-scroll-text 20s linear infinite;
+}
+
+.animate-scroll {
+  animation: framer-scroll-left 30s linear infinite;
+}
+
+.animate-scroll-reverse {
+  animation: framer-scroll-right 30s linear infinite;
+}
+
+.animate-scroll-text {
+  animation: framer-scroll-text 20s linear infinite;
+}
+
+/* Custom tab styling to match original design */
+.tabs-trigger-active {
+  background: white;
+  color: rgb(17, 24, 39);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+}
+
+/* Video styling */
+video {
+  border-radius: 8px;
+  background: #000;
+}
+
+/* Code block styling */
+pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
