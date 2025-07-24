@@ -45,6 +45,101 @@ html, body {
   animation: fadeIn 0.3s ease-out;
 }
 
+/* API Terminal Flow Animations */
+.first-query {
+  animation: typing 2s steps(80) forwards;
+}
+
+.first-output {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 3s forwards;
+}
+
+.second-query {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out 4s forwards, typing2 1.5s steps(100) 4.5s forwards;
+}
+
+.second-output {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 6.5s forwards;
+}
+
+/* Terminal scrolling - happens after second output appears */
+.terminal-content {
+  position: relative;
+  animation: terminalScrollUp 1s ease-out 7.5s forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+    opacity: 1;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes typing2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes terminalScrollUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-60px);
+  }
+}
+
+@keyframes scrollToTop {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes terminalScroll {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50px);
+  }
+}
+
+@keyframes scrollUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 @keyframes pulse {
   0%, 100% {
     opacity: 1;
@@ -302,6 +397,79 @@ pre {
 
 .floating-logo {
   animation: float 6s ease-in-out infinite;
+}
+
+/* Individual floating animations for curve images */
+@keyframes float1 {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-8px) translateX(4px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(4px) translateX(-2px) rotate(-0.5deg);
+  }
+}
+
+@keyframes float2 {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(6px) translateX(-3px) rotate(-1deg);
+  }
+  75% {
+    transform: translateY(-4px) translateX(5px) rotate(0.8deg);
+  }
+}
+
+@keyframes float3 {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+  40% {
+    transform: translateY(-6px) translateX(2px) rotate(0.7deg);
+  }
+  80% {
+    transform: translateY(3px) translateX(-4px) rotate(-0.3deg);
+  }
+}
+
+@keyframes float4 {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+  30% {
+    transform: translateY(5px) translateX(3px) rotate(-0.8deg);
+  }
+  70% {
+    transform: translateY(-7px) translateX(-1px) rotate(1.2deg);
+  }
+}
+
+@keyframes float5 {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) translateX(-3px) rotate(0.6deg);
+  }
+  85% {
+    transform: translateY(4px) translateX(2px) rotate(-0.4deg);
+  }
+}
+
+@keyframes float6 {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+  35% {
+    transform: translateY(7px) translateX(-2px) rotate(0.9deg);
+  }
+  65% {
+    transform: translateY(-3px) translateX(4px) rotate(-0.7deg);
+  }
 }
 
 /* Progress bar animation */
